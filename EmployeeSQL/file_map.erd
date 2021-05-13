@@ -1,0 +1,34 @@
+departments
+-
+dept_no PK int
+dept_name string
+
+dept_emp
+-
+emp_no int FK
+dept_no int FK
+
+dept_manager
+-
+dept_no int FK
+emp_no int FK
+
+employees
+-
+emp_no PK int
+emp_title_id int FK
+birth_date date
+first_name string
+last_name string
+sex CHAR(1)
+hire_date date
+
+salaries
+-
+emp_no int FK
+salary int
+
+titles
+-
+title_id PK int
+title string

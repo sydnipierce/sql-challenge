@@ -5,13 +5,13 @@ dept_name string
 
 dept_emp
 -
-emp_no int FK >- employees.emp_no
-dept_no int FK >- departments.dept_no
+emp_no PK int FK >- employees.emp_no
+dept_no PK int FK >- departments.dept_no
 
 dept_manager
 -
-dept_no int FK >- departments.dept_no
-emp_no int FK - employees.emp_no
+dept_no PK int FK >- departments.dept_no
+emp_no PK int FK - employees.emp_no
 
 employees
 -

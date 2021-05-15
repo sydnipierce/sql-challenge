@@ -27,7 +27,7 @@ ON (de.dept_no=d.dept_no)
 -- 5: List first + last name, sex for employees named Hercules B.
 Select first_name, last_name, sex
 FROM employees
-WHERE last_name IN
-(
-	SELECT substring
+WHERE first_name = 'Hercules'
+AND
+	(SELECT substring
 		(last_name for 1) = 'B');

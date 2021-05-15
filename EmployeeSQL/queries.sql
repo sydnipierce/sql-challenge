@@ -49,3 +49,9 @@ ON (de.dept_no=d.dept_no)
 	LEFT JOIN employees AS e
 	ON (de.emp_no=e.emp_no)
 	WHERE d.dept_name = 'Sales' OR d.dept_name = 'Development';
+	
+-- 8: Frequency count of last name in descending order
+Select last_name, count(last_name) AS "Frequency"
+FROM employees
+GROUP BY last_name
+ORDER BY "Frequency" DESC;

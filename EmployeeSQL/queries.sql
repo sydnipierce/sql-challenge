@@ -24,4 +24,10 @@ ON (de.dept_no=d.dept_no)
 	LEFT JOIN employees AS e
 	ON (de.emp_no=e.emp_no);
 	
--- 5: 
+-- 5: List first + last name, sex for employees named Hercules B.
+Select first_name, last_name, sex
+FROM employees
+WHERE last_name IN
+(
+	SELECT substring
+		(last_name for 1) = 'B');

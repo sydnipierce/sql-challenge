@@ -5,18 +5,18 @@ dept_name string
 
 dept_emp
 -
-emp_no int FK
-dept_no int FK
+emp_no int FK >- employees.emp_no
+dept_no int FK >- departments.dept_no
 
 dept_manager
 -
-dept_no int FK
-emp_no int FK
+dept_no int FK >- departments.dept_no
+emp_no int FK - employees.emp_no
 
 employees
 -
 emp_no PK int
-emp_title_id int FK
+emp_title_id int FK >- titles.title_id
 birth_date date
 first_name string
 last_name string
@@ -25,7 +25,7 @@ hire_date date
 
 salaries
 -
-emp_no int FK
+emp_no int FK - employees.emp_no
 salary int
 
 titles
